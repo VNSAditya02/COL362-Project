@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang = "en">
+  <head>
+      <!-- <style>
+        title {text-align: center;}
+        h1 {text-align: center;}
+        p {text-align: center;}
+        div {text-align: center;}
+      </style>
+ -->      <meta charset = "utf-8">
+      <title> Quiz </title>
+  </head>
+  <body>
+      <h1> Quiz </h1>
+      <form action="{{ url_for('results', quizId = quizId)}}" method = "post">
+          {% for question in questions %}
+              <p> {{question[2]}} </p>
+              <div>
+                <input type = "radio" id = "option1" name = {{question[0]}} value = "option1">
+                <label for = "option1"> {{question[4]}} </label> <br>
+
+                <input type = "radio" id = "option2" name = {{question[0]}} value = "option2">
+                <label for = "option2"> {{question[5]}} </label> <br>
+
+                <input type = "radio" id = "option3" name = {{question[0]}} value = "option3">
+                <label for = "option3"> {{question[6]}} </label> <br>
+
+                <input type = "radio" id = "option4" name = {{question[0]}} value = "option4">
+                <label for = "option4"> {{question[7]}} </label> <br>
+              </div>
+          {% endfor %}
+          <div>
+              <button> Submit </button>
+          </div>
+      </form>
+  </body>
+
+</html>

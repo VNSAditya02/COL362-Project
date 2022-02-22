@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang = "en">
+  <head>
+      <style>
+        title {text-align: center;}
+        h1 {text-align: center;}
+        p {text-align: center;}
+        div {text-align: center;}
+      </style>
+      <meta charset = "utf-8">
+      <title> Homepage </title>
+  </head>
+  <body>
+      <h1> Quiz </h1>
+      <form action = "{{ url_for('questions', userName = userName)}}" method = "post">
+          <div>
+              <button> Start History Quiz </button>
+          </div>
+      </form>
+  </body>
+
+</html>
